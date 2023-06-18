@@ -1,10 +1,9 @@
 {
     "compilerOptions": {
-<<<<<<< HEAD
+
         "baseUrl": "https://",
-=======
-        "baseUrl": "/",
->>>>>>> b509769b96a2d851476a26dc562fccd0c60193c5
+
+        
         "paths": {
             "@/*": ["resources/js/*"]
         }
