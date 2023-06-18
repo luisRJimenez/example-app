@@ -124,7 +124,7 @@
                         
                         <form on:submit|preventDefault></form>
 
-                        <a href={route('usuarios.editar', users.id)} class="font-medium text-blue-100 dark:text-blue-500">✏️</a>
+                        <a href={window.route('usuarios.editar', users.id)} class="font-medium text-blue-100 dark:text-blue-500">✏️</a>
                        
                         <button class="font-medium text-red-100 dark:text-red-500" on:click={destroy(users.id)}>🗑️</button>
                                        

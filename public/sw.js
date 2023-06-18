@@ -11,9 +11,8 @@ self.addEventListener("install", function (event) {
 
 const filesToCache = [
     './',
-    './index.php',
-    
-];
+    './index.php'
+    ];
 
 const checkResponse = function (request) {
     return new Promise(function (fulfill, reject) {
