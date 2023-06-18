@@ -1,0 +1,41 @@
+# fly.toml app configuration file generated for polished-star-8157 on 2023-06-11T10:49:50-05:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "polished-star-8157"
+primary_region = "bog"
+console_command = "php /var/www/html/artisan tinker"
+
+[build]
+  [build.args]
+    NODE_VERSION = "18"
+    PHP_VERSION = "8.2"
+
+[env]
+  APP_ENV = "production"
+  LOG_CHANNEL = "stderr"
+  LOG_LEVEL = "info"
+  LOG_STDERR_FORMATTER = "Monolog\\Formatter\\JsonFormatter"
+  SESSION_DRIVER = "cookie"
+  SESSION_SECURE_COOKIE = "true"
+
+  DB_CONNECTION="mysql"
+  DB_HOST="containers-us-west-54.railway.app"
+  DB_PORT="5614"
+  DB_DATABASE="railway"
+  DB_USERNAME="root"
+  DB_PASSWORD="HBEG19NidNZmeZqnrd1V"
+  
+#MYSQL_ATTR_SSL_CA="/etc/ssl/certs/ca-certificates.crt"
+
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+
+[deploy]
+  release_command = "php /var/www/html/artisan migrate --force"
