@@ -10,8 +10,8 @@ self.addEventListener("install", function (event) {
 });
 
 const filesToCache = [
-    '/',
-    '/index.php'   
+    './',
+    './index.php',
     
 ];
 
