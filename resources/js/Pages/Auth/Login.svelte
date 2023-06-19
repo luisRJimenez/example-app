@@ -37,7 +37,7 @@
 {/if}
 
 <form on:submit|preventDefault={submit}>
-    @crft
+    @csrf
     <div>
         <InputLabel for="email" value="Email" />
 
