@@ -20,7 +20,7 @@
     });
 
     const submit = () => {
-        $form.post(route("/login"), {
+        $form.post(route("login"), {
             onFinish: () => $form.reset("password"),
         });
     };
@@ -37,6 +37,7 @@
 {/if}
 
 <form on:submit|preventDefault={submit}>
+    @crft
     <div>
         <InputLabel for="email" value="Email" />
 
