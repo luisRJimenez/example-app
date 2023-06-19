@@ -16,7 +16,7 @@
         email: "",
         password: "",
         remember: false,
-        _token: this.$page.props.csrf_token,
+        
     });
 
     const submit = () => {
