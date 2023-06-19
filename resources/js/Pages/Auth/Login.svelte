@@ -19,7 +19,7 @@
     });
 
     const submit = () => {
-        $form.post(route("login"), {
+        $form.post(window.route("login"), {
             onFinish: () => $form.reset("password"),
         });
     };
