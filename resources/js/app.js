@@ -4,6 +4,7 @@ import "../css/app.css";
 
 import { createInertiaApp } from "@inertiajs/svelte";
 
+
 const appName =
     window.document.getElementsByTagName("title")[0]?.innerText || "Laravel";
 

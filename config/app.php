@@ -56,7 +56,7 @@ return [
     */
 
     'url' => env('APP_URL', 'https://example-app-production.up.railway.app'),
-
+    'scheme' => env('APP_SCHEME', 'https'),
     'asset_url' => env('ASSET_URL'),
 
     /*

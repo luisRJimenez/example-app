@@ -1,5 +1,5 @@
 <script>
-    import { Link, page } from "@inertiajs/svelte";
+    import { Link, page} from "@inertiajs/svelte";
 
     export let canLogin, canRegister, laravelVersion, phpVersion;
 </script>

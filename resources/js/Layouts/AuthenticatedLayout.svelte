@@ -1,6 +1,6 @@
 <script>
     import { Link, page } from "@inertiajs/svelte";
-
+    
     import NavLink from "../Components/NavLink.svelte";
     import Dropdown from "../Components/Dropdown.svelte";
     import DropdownLink from "../Components/DropdownLink.svelte";
