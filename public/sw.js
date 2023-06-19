@@ -14,9 +14,7 @@ const filesToCache = [
     '/index.php',
     '/login',
     '/dashboard',
-    '/usuarios',
-    '/roles',
-    '/encuestas'
+    
     
     ];
 
