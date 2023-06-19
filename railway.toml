@@ -1,0 +1,3 @@
+[[headers]]
+source = "/.*"
+headers = { "Location" = "https://$host$request_uri", "X-Forwarded-Proto" = "https" }
