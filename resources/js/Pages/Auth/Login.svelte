@@ -9,17 +9,23 @@
     import InputError from "../../Components/InputError.svelte";
     import PrimaryButton from "../../Components/PrimaryButton.svelte";
     import Checkbox from "../../Components/Checkbox.svelte";
+    import axios from "axios";
 
     export let canResetPassword, status;
+
+    const getToken = async() => {
+        await axios.get("/sactum/csrf-cookie");
+    };
 
     const form = useForm({
         email: "",
         password: "",
         remember: false,
-        _token: "{{csrf_token()}}"
+        
     });
 
     const submit = () => {
+        getToken();
         $form.post(route("login"), {
             onFinish: () => $form.reset("password"),
         });
