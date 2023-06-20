@@ -14,7 +14,7 @@
     export let canResetPassword, status;
 
     const getToken = async() => {
-        await axios.get("/sactum/csrf-cookie");
+        await axios.get("/sanctum/csrf-cookie");
     };
 
     const form = useForm({
