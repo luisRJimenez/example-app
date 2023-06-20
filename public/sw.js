@@ -15,7 +15,7 @@ const filesToCache = [
     "https://example-app-production.up.railway.app/apple-touch-icon.png",
     'https://example-app-production.up.railway.app/index.php',
     'https://example-app-production.up.railway.app/login',
-    'http://example-app-production.up.railway.app/dashboard',
+    "http://example-app-production.up.railway.app/usuarios",
     "https://example-app-production.up.railway.app/manifest.json",
     "https://example-app-production.up.railway.app/sw.js",
    
