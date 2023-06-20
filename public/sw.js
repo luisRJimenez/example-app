@@ -13,7 +13,7 @@ const filesToCache = [
     './',
     './index.php',
     './login',
-    './usuarios'
+   
     
     
     
