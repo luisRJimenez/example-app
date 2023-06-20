@@ -26,9 +26,9 @@
 
     const submit = () => {
         getToken();
-        $form.post(route('login'), {
+        $form.post('/login'), {
             onFinish: () => $form.reset("password"),
-        });
+        };
     };
 </script>
 
