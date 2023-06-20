@@ -4,9 +4,9 @@
     </div>
 
     <form method="POST" action="{{ route('password.confirm') }}">
-        @csrf
+       <!-- @csrf
 
-        <!-- Password -->
+         Password -->
         <div>
             <x-input-label for="password" :value="__('Password')" />
 

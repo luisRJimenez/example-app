@@ -13,9 +13,9 @@
 
     export let canResetPassword, status;
 
-    const getToken = async() => {
-        await axios.get("/sanctum/csrf-cookie");
-    };
+    // const getToken = async() => {
+    //     await axios.get("/sanctum/csrf-cookie");
+    // };
 
     const form = useForm({
         email: "",
@@ -25,7 +25,7 @@
     });
 
     const submit = () => {
-        getToken();
+        //getToken();
         $form.post('/login'), {
             onFinish: () => $form.reset("password"),
         };
@@ -43,7 +43,7 @@
 {/if}
 
 <form on:submit|preventDefault={submit}>
-    @csrf
+ 
     <div>
         <InputLabel for="email" value="Email" />
 
