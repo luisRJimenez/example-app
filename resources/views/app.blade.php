@@ -13,7 +13,7 @@
     <link rel="manifest" href="{{ asset('manifest.json') }}">
     @routes
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    
+    @inertiaHead
 </head>
 
 <body>
