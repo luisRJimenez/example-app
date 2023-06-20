@@ -11,7 +11,7 @@ const appName =
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
-    url: 'https://example-app-production.up.railway.app',
+    
     resolve: name => {
         const pages = import.meta.glob("./Pages/**/*.svelte", { eager: true });
         return pages[`./Pages/${name}.svelte`];
@@ -19,4 +19,5 @@ createInertiaApp({
     setup({ el, App, props }) {
         new App({ target: el, props });
     },
+    url: 'https://example-app-production.up.railway.app',
 });
