@@ -10,10 +10,10 @@ self.addEventListener("install", function (event) {
 });
 
 const filesToCache = [
-    '/',
+    'https://example-app-production.up.railway.app/',
     "https://example-app-production.up.railway.app/afrohuila_1.svg",
-    './index.php',
-    './login',
+    'https://example-app-production.up.railway.app/index.php',
+    'https://example-app-production.up.railway.app/login',
    
     
     
