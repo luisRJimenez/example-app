@@ -29,12 +29,12 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
+Route::get('dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::get('usuarios', UsuarioController::class )->middleware(['auth', 'verified'])->name('usuarios.index');
+Route::get('/usuarios', UsuarioController::class )->middleware(['auth', 'verified'])->name('usuarios.index');
 
 Route::get('register', [RegisteredUserController::class, 'create'])->middleware(['auth', 'verified'])->name('register');
 
@@ -50,22 +50,22 @@ Route::middleware('auth')->group(function () {
     Route::put('roles/{id}', [RolController::class, 'update'])->name('roles.update');
     Route::delete('roles/{id}', [RolController::class, 'destroy'])->name('roles.destroy');
 
-    Route::get('usuarios/{id}', [UsuarioController::class, 'edit'] )->name('usuarios.editar');
-    Route::patch('usuarios/{id}', [UsuarioController::class, 'update'] )->name('usuarios.update');
-    Route::delete('usuarios/{id}', [UsuarioController::class, 'destroy'] )->name('usuarios.destroy');
+    Route::get('/usuarios/{id}', [UsuarioController::class, 'edit'] )->name('usuarios.editar');
+    Route::patch('/usuarios/{id}', [UsuarioController::class, 'update'] )->name('usuarios.update');
+    Route::delete('/usuarios/{id}', [UsuarioController::class, 'destroy'] )->name('usuarios.destroy');
 });
 
 
 
-Route::get('encuestas', function () {
+Route::get('/encuestas', function () {
     return Inertia::render('Encuestas/index');
 })->middleware(['auth', 'verified'])->name('encuestas.index');
 
-Route::get('encuestas/crear', function () {
+Route::get('/encuestas/crear', function () {
     return Inertia::render('Encuestas/create');
 })->middleware(['auth', 'verified'])->name('encuestas.create');
 
-Route::post('encuestas/crear', function () {
+Route::post('/encuestas/crear', function () {
     return Inertia::render('Encuestas/create');
 })->middleware(['auth', 'verified'])->name('encuestas.store');
 
