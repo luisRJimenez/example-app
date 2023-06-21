@@ -11,19 +11,23 @@ self.addEventListener("install", function (event) {
 
 const filesToCache = [
     '/',
-    '/index.php'
-    // 'https://example-app-production.up.railway.app/',
-    // "https://example-app-production.up.railway.app/afrohuila_1.svg",
-    // "https://example-app-production.up.railway.app/apple-touch-icon.png",
-    // "https://example-app-production.up.railway.app/build/assets/app-f2a28a1f.css",
-    // "https://example-app-production.up.railway.app/build/assets/app-8c6a0ea2.css",
-    // "https://example-app-production.up.railway.app/build/assets/app-f8a08eae.js",
-    // 'https://example-app-production.up.railway.app/index.php',
-    // 'https://example-app-production.up.railway.app/login',
-    // "https://example-app-production.up.railway.app/register",
+    '/index.php',
     
-    // "https://example-app-production.up.railway.app/manifest.json",
-    // "https://example-app-production.up.railway.app/sw.js",
+    "/afrohuila_1.svg",
+    "/apple-touch-icon.png",
+    "/build/assets/app-f2a28a1f.css",
+    "/build/assets/app-8c6a0ea2.css",
+    "/build/assets/app-7ac38bf3.js",
+    
+    '/login',
+    "/register",
+    '/dashboard',
+    '/usuarios',
+    '/roles',
+    '/encuestas',
+    '/profile',
+    "/manifest.json",
+    "/sw.js",
    
     
     

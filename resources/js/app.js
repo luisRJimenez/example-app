@@ -19,5 +19,5 @@ createInertiaApp({
     setup({ el, App, props }) {
         new App({ target: el, props });
     },
-    url: 'https://example-app-production.up.railway.app',
+    
 });
