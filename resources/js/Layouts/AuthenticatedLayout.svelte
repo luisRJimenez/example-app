@@ -130,7 +130,7 @@
                                     </DropdownLink>
                                     <DropdownLink
                                         href={route('logout')} 
-                                        method="post"
+                                        method="get"
                                         as="button"
                                     >
                                         Log Out
