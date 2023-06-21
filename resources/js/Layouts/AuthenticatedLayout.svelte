@@ -6,6 +6,7 @@
     import DropdownLink from "../Components/DropdownLink.svelte";
     import ApplicationLogo from "../Components/ApplicationLogo.svelte";
     import ResponsiveNavLink from "../Components/ResponsiveNavLink.svelte";
+    import Route from "vendor/tightenco/ziggy/src/js/Route";
 
     let showingNavigationDropdown = false;
     $: console.log($page.props.auth.user_roles[0])
@@ -127,7 +128,7 @@
                                         Profile
                                     </DropdownLink>
                                     <DropdownLink
-                                        href={window.route("logout")}
+                                        href={Route('logout')}
                                         method="post"
                                         as="button"
                                     >
