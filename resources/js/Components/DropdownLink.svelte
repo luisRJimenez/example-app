@@ -2,7 +2,7 @@
     import { Link } from "@inertiajs/svelte";
 
     export let href,
-        method = "get",
+        method = "post",
         as = "button";
 </script>
 

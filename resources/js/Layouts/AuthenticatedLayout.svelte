@@ -129,7 +129,7 @@
                                         Profile
                                     </DropdownLink>
                                     <DropdownLink
-                                        href={route('logout')}
+                                        href={route('logout')} 
                                         method="post"
                                         as="button"
                                     >
