@@ -15,9 +15,9 @@ const filesToCache = [
     
     "/afrohuila_1.svg",
     "/apple-touch-icon.png",
-    "/build/assets/app-f2a28a1f.css",
-    "/build/assets/app-8c6a0ea2.css",
-    "/build/assets/app-7ac38bf3.js",
+    // "/build/assets/app-f2a28a1f.css",
+    // "/build/assets/app-8c6a0ea2.css",
+    // "/build/assets/app-7ac38bf3.js",
     
     '/login',
     "/register",
