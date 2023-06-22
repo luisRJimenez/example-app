@@ -9,9 +9,17 @@
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
+    #First rewrite any request to the wrong domain to use the correct one (here www.)
+    RewriteCond %{HTTP_HOST} ^www\.
+    RewriteRule ^(.*)$ https://example-app-production.up.railway.app/$1 [L,R=301]
+
+    #Now, rewrite to HTTPS:
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://example-app-production.up.railway.app/$1 [L,R=301]
+
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond ^(.*)$ https://%{REQUEST_URI} (.+)/$
+    RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
 
     # Send Requests To Front Controller...
