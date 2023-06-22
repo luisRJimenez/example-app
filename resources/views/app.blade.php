@@ -11,9 +11,10 @@
     
     <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
     <link rel="manifest" href="{{ asset('manifest.json') }}">
-    @routes
+    
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @inertiaHead
+    @routes
 </head>
 
 <body>
