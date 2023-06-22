@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import laravel from "laravel-vite-plugin";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 
-const ASSET_URL = process.env.ASSET_URL || '';
+
 
 export default defineConfig({
     

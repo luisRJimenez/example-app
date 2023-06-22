@@ -17,9 +17,9 @@ Route::middleware('guest')->group(function () {
     
 
     Route::get('/login', [AuthenticatedSessionController::class, 'create'])
-                ->name('login');
+                ->name('login')->forceScheme('https');
 
-    Route::post('login', [AuthenticatedSessionController::class, 'store']);
+    Route::post('login', [AuthenticatedSessionController::class, 'store'])->forceScheme('https');
 
     Route::get('register', [RegisteredUserController::class, 'create'])
                 ->name('register');
