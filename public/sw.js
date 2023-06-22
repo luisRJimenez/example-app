@@ -12,7 +12,7 @@ self.addEventListener("install", function (event) {
 const filesToCache = [
     '/',
     '/index.php',
-    'http://example-app-production.up.railway.app/login',
+    'https://example-app-production.up.railway.app/login',
     'https://example-app-production.up.railway.app/dashboard',
     
     // "/afrohuila_1.svg",
