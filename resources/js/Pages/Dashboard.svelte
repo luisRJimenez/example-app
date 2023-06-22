@@ -1,4 +1,5 @@
-<script context="module">
+<script >
+   // context="module"
     export { default as layout } from "../Layouts/AuthenticatedLayout.svelte";
 </script>
 
