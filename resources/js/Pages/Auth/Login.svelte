@@ -9,7 +9,7 @@
     import InputError from "../../Components/InputError.svelte";
     import PrimaryButton from "../../Components/PrimaryButton.svelte";
     import Checkbox from "../../Components/Checkbox.svelte";
-    import axios from "axios";
+
 
     export let canResetPassword, status;
 
@@ -26,7 +26,7 @@
 
     const submit = () => {
         //getToken();
-        $form.post('/login'), {
+        $form.post('./login'), {
             onFinish: () => $form.reset("password"),
         };
     };
