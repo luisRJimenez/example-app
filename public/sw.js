@@ -12,6 +12,8 @@ self.addEventListener("install", function (event) {
 const filesToCache = [
     '/',
     '/index.php',
+    '/login',
+    '/dashboard',
     
     // "/afrohuila_1.svg",
     // "/apple-touch-icon.png",
