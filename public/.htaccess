@@ -27,3 +27,9 @@
 Order allow,deny
 Deny from all
 </Files>
+
+server {
+    listen 80;
+    server_name example-app-production.up.railway.app;
+    return 301 https://$host$request_uri;
+}
