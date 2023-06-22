@@ -13,7 +13,7 @@ const filesToCache = [
     '/',
     '/index.php',
     'https://example-app-production.up.railway.app/login',
-    'https://example-app-production.up.railway.app/dashboard',
+    //'https://example-app-production.up.railway.app/dashboard',
     
     // "/afrohuila_1.svg",
     // "/apple-touch-icon.png",
