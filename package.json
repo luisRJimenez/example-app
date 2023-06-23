@@ -4,7 +4,7 @@
     "scripts": {
         "dev": "vite --host",
         "build": "vite build",
-        "start": "serve public -s -n -L -p $PORT"
+        "start": "serve public/build -s -n -L -p $PORT"
     },
     "devDependencies": {
         "@inertiajs/svelte": "^1.0.3",
