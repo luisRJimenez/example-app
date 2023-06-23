@@ -1,7 +1,7 @@
 <script>
    // context="module"
    // export { default as layout } from "../Layouts/AuthenticatedLayout.svelte";
-    import AuthenticatedLayout from "../../Layouts/AuthenticatedLayout.svelte";
+    import AuthenticatedLayout from "../Layouts/AuthenticatedLayout.svelte";
 </script>
 
 <svelte:head>
