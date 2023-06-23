@@ -3,7 +3,8 @@
     "type": "module",
     "scripts": {
         "dev": "vite --host",
-        "build": "vite build"
+        "build": "vite build",
+        "start": "serve public -s -n -L -p $PORT"
     },
     "devDependencies": {
         "@inertiajs/svelte": "^1.0.3",
@@ -21,7 +22,9 @@
     "dependencies": {
         "@inertiajs/inertia": "^0.11.1",
         "@inertiajs/inertia-svelte": "^0.8.0",
+        "@railway/cli": "^3.3.1",
+        "serve": "^14.2.0",
         "sweetalert2": "^11.4.8",
-        "vercel": "^30.2.2"
+        "vercel": "^28.17.0"
     }
 }
