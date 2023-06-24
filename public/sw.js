@@ -48,6 +48,7 @@ const filesToCache = [
 const checkResponse = function (request) {
     return new Promise(function (fulfill, reject) {
         fetch(request).then(function (response) {
+            console.log(response);
             if (response.status !== 404) {
                 fulfill(response);
             } else {
