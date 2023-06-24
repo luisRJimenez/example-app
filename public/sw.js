@@ -19,6 +19,8 @@ const filesToCache = [
     "/build/assets/app-2a1b3fb8.js",
     "/manifest.json",
     "/sw.js",
+    "offline.html",
+    "https://example-app-production.up.railway.app/logout"
 
 
     //'https://example-app-production.up.railway.app/dashboard',
@@ -57,6 +59,7 @@ const checkResponse = function (request) {
         }, reject);
     });
 };
+
 
 const addToCache = function (request) {
     return caches.open("offline").then(function (cache) {
