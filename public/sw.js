@@ -11,16 +11,16 @@ self.addEventListener("install", function (event) {
 
 const filesToCache = [
     '/',
-    '/index.php',
-    "/afrohuila_1.svg",
-    "/apple-touch-icon.png",
-    "/build/assets/app-f2a28a1f.css",
-    "/build/assets/app-8c6a0ea2.css",
-    "/build/assets/app-2a1b3fb8.js",
-    "/manifest.json",
-    "/sw.js",
+    'index.php',
+    "afrohuila_1.svg",
+    "apple-touch-icon.png",
+    "build/assets/app-f2a28a1f.css",
+    "build/assets/app-8c6a0ea2.css",
+    "build/assets/app-2a1b3fb8.js",
+    "manifest.json",
+    "sw.js",
     "offline.html",
-    "https://example-app-production.up.railway.app/logout"
+    
 
 
     //'https://example-app-production.up.railway.app/dashboard',
