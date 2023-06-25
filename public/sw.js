@@ -19,7 +19,7 @@ const filesToCache = [
     "build/assets/app-2a1b3fb8.js",
     "manifest.json",
     "sw.js",
-    "offline.html",
+    "offline.html"
     
 
 
