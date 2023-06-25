@@ -1,14 +1,14 @@
-<script>
+<script context="module">
    // context="module"
-   // export { default as layout } from "../Layouts/AuthenticatedLayout.svelte";
-    import AuthenticatedLayout from "../Layouts/AuthenticatedLayout.svelte";
+    export { default as layout } from "../Layouts/AuthenticatedLayout.svelte";
+    //import AuthenticatedLayout from "../Layouts/AuthenticatedLayout.svelte";
 </script>
 
 <svelte:head>
     <title>Dashboard</title>
 </svelte:head>
 
-<AuthenticatedLayout>
+<!-- <AuthenticatedLayout> -->
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div
@@ -20,4 +20,4 @@
             </div>
         </div>
     </div>
-</AuthenticatedLayout>
+<!-- </AuthenticatedLayout> -->
