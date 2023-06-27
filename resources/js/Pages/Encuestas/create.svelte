@@ -37,7 +37,8 @@
    let url = '/encuestas/crear';
    
    router.post(url, {
-     data: JSON.stringify(todos)
+     data: JSON.stringify(todos),
+     onFinish: () => console.log('aqui')
    });
    console.log('sincroinizar')
   }

@@ -4,7 +4,7 @@
 </script>
 
 <script>
-  import { Link, useForm } from "@inertiajs/svelte";
+  import { Link, useForm, page } from "@inertiajs/svelte";
   import InputLabel from "../../Components/InputLabel.svelte";
   import TextInput from "../../Components/TextInput.svelte";
   import InputError from "../../Components/InputError.svelte";
@@ -27,13 +27,15 @@
  // console.log(user, id)
   
   let scope = roles[0];
-
+   
+  
   const form = useForm({
       name: user.name,
       email: user.email,
       password: "",
       password_confirmation: "",
       rol: id,
+      _csrf: $page.props.csrf_token,
       terms: false,
   });
 
@@ -56,6 +58,8 @@
   <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
       <div class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
           <form on:submit|preventDefault={submit}>
+
+            <input type="hidden" name="_csrf" value={$form._csrf}>
               <div>
                   <InputLabel for="name" value="Name" classes/>
 

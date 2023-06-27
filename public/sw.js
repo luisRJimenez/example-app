@@ -11,13 +11,13 @@ self.addEventListener("install", function (event) {
 
 const filesToCache = [
     '/',
-    '/index.php',
-    "/afrohuila_1.svg",
-    "/apple-touch-icon.png",
+    'index.php',
+    "afrohuila_1.svg",
+    "apple-touch-icon.png",
     
-    "/manifest.json",
-    "/sw.js",
-    "/offline.html",
+    "manifest.json",
+    "sw.js",
+    "offline.html",
     
 
 
