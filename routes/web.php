@@ -51,7 +51,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('roles/{id}', [RolController::class, 'destroy'])->name('roles.destroy');
 
     Route::get('/usuarios/{id}', [UsuarioController::class, 'edit'] )->name('usuarios.editar');
-    Route::patch('/usuarios/{id}', [UsuarioController::class, 'update'] )->name('usuarios.update');
+    Route::put('/usuarios/{id}', [UsuarioController::class, 'update'] )->name('usuarios.update');
     Route::delete('/usuarios/{id}', [UsuarioController::class, 'destroy'] )->name('usuarios.destroy');
 });
 
