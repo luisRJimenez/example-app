@@ -40,7 +40,7 @@
   });
 
   const submit = () => {
-      $form.patch(route('usuarios.update', user.id), {
+      $form.put(route('usuarios.update', user.id), {
           onFinish: () => $form.reset("password", "password_confirmation"),
       });
   };
