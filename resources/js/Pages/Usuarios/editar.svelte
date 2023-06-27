@@ -24,7 +24,7 @@
 ]
 
   let {id} = user.roles[0]??0;   
- // console.log(user, id)
+  console.log($page.props.csrf_token)
   
   let scope = roles[0];
    
@@ -35,12 +35,12 @@
       password: "",
       password_confirmation: "",
       rol: id,
-      _token: $page.props.csrf_token,
+      
       terms: false,
   });
 
   const submit = () => {
-      $form.put(route('usuarios.update', user.id), {
+      $form.patch(route('usuarios.update', user.id), {
           onFinish: () => $form.reset("password", "password_confirmation"),
       });
   };
@@ -58,7 +58,7 @@
   <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
       <div class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
           <form action={window.route('usuarios.update', user.id)} on:submit|preventDefault={submit}>
-            <input type="hidden" name="_token" bind:value={$form._token}>
+            
             
               <div>
                   <InputLabel for="name" value="Name" classes/>
