@@ -35,7 +35,7 @@
       password: "",
       password_confirmation: "",
       rol: id,
-      _csrf: $page.props.csrf_token,
+      _token: $page.props.csrf_token,
       terms: false,
   });
 
@@ -58,7 +58,7 @@
   <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
       <div class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
           <form action={window.route('usuarios.update', user.id)} on:submit|preventDefault={submit}>
-            <input type="hidden" name="_token" bind:value={$form._csrf}>
+            <input type="hidden" name="_token" bind:value={$form._token}>
             
               <div>
                   <InputLabel for="name" value="Name" classes/>
