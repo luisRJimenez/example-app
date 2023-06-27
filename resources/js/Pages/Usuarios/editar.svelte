@@ -59,7 +59,7 @@
       <div class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
           <form on:submit|preventDefault={submit}>
 
-            <input type="hidden" name="_csrf" value={$form._csrf}>
+            
               <div>
                   <InputLabel for="name" value="Name" classes/>
 

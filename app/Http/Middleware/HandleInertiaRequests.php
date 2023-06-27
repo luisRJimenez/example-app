@@ -39,6 +39,7 @@ class HandleInertiaRequests extends Middleware
             'flag' => [
                 'message' => fn() => $request->session()->get('message')
             ],
+            'csrf_token' => csrf_token(),
         ]);
     }
 }
