@@ -5,8 +5,8 @@
 
     RewriteEngine On
 
-    RewriteCond %{HTTPS} !=on
-    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    # RewriteCond %{HTTPS} !=on
+    # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
@@ -33,8 +33,8 @@ Order allow,deny
 Deny from all
 </Files>
 
-server {
-    force_https = true
-    server_name example-app-production.up.railway.app;
-    return 301 https://$host$request_uri;
-}
+# server {
+#     force_https = true
+#     server_name example-app-production.up.railway.app;
+#     return 301 https://$host$request_uri;
+# }

@@ -3,7 +3,7 @@
 </script>
 
 <script>
-    import { Link, useForm } from "@inertiajs/svelte";
+    import { Link, useForm, page } from "@inertiajs/svelte";
     import InputLabel from "../../Components/InputLabel.svelte";
     import TextInput from "../../Components/TextInput.svelte";
     import InputError from "../../Components/InputError.svelte";
@@ -13,9 +13,7 @@
 
     export let canResetPassword, status;
 
-    // const getToken = async() => {
-    //     await axios.get("/sanctum/csrf-cookie");
-    // };
+   
 
     const form = useForm({
         email: "",
@@ -25,8 +23,8 @@
     });
 
     const submit = () => {
-        //getToken();
-        $form.post('./login'), {
+        
+        $form.post(route('login')), {
             onFinish: () => $form.reset("password"),
         };
     };
@@ -36,6 +34,8 @@
     <title>Log in</title>
 </svelte:head>
 
+
+<pre>{JSON.stringify($form)}</pre>
 {#if status}
     <div class="mb-4 font-medium text-sm text-green-600">
         {status}
@@ -43,7 +43,7 @@
 {/if}
 
 <form on:submit|preventDefault={submit}>
- 
+  
     <div>
         <InputLabel for="email" value="Email" />
 

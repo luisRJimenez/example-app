@@ -26,7 +26,7 @@ export default defineConfig({
         },
         watch: {
             usePolling: true
-        },
+        }
         // proxy: {
         //     '/': {
         //       target: 'https://example-app-production.up.railway.app',

@@ -19,14 +19,14 @@
 
 <body>
     @inertia
-    <script src="{{ asset('sw.js') }}"></script>
+    <!-- <script src="{{ asset('sw1.js') }}"></script>
     <script>
     if (!navigator.serviceWorker.controller) {
-        navigator.serviceWorker.register("/sw.js").then(function (reg) {
+        navigator.serviceWorker.register("/sw1.js").then(function (reg) {
             console.log("Service worker has been registered for scope: " + reg.scope);
         });
     }
-    </script>   
+    </script>    -->
 </body>
 
 </html>
