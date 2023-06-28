@@ -40,9 +40,9 @@
   });
 
   const submit = () => {
-      $form.patch(route('usuarios.update', user.id), {
+      $form.patch(`usuarios.update:`), {
           onFinish: () => $form.reset("password", "password_confirmation"),
-      });
+      };
   };
 
   $: console.log(JSON.stringify($form))
@@ -57,7 +57,7 @@
 <div class="py-12">
   <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
       <div class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
-          <form action={window.route('usuarios.update', user.id)} method="POST" on:submit|preventDefault={submit}>
+          <form on:submit|preventDefault={submit}>
             
             
               <div>
