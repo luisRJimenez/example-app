@@ -66,8 +66,8 @@
 
   const updaterol = () => {
     console.log($form.id)
-    $form.put(`roles/${$form.id}`),  {
-      
+    $form.put(`roles/${$form.id}`,  {
+      _method: 'put'}, {
       onSuccess: () => {
               Toast.fire({
                 icon: 'success',
@@ -82,7 +82,7 @@
             },
       onFinish: () => $form.reset(),
 
-    };
+    });
   
     editstatus = false;
     
