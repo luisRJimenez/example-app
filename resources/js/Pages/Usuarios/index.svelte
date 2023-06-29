@@ -7,7 +7,7 @@
     import { page, Link, useForm } from "@inertiajs/svelte";
     import AuthenticatedLayout from "../../Layouts/AuthenticatedLayout.svelte";
     import Swal from 'sweetalert2';
-    import { prevent_default } from "svelte/internal";
+    
     export let usuario;
   
     //console.log(JSON.stringify(usuario.roles[0]));
