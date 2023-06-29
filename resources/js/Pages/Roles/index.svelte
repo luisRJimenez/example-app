@@ -66,7 +66,7 @@
 
   const updaterol = () => {
     console.log($form.id)
-    $form.put(` roles/${$form.id}`),  {
+    $form.put(`roles/${$form.id}`),  {
       preserveState: false,
       onSuccess: () => {
               Toast.fire({
