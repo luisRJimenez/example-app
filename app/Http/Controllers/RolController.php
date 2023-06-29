@@ -101,7 +101,7 @@ class RolController extends Controller
 
         $role->syncPermissions($request->permisos);
 
-        return redirect()->back()->with('message', 'Actualizado exitosamente!');
+        
     }
 
     /**
