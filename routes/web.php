@@ -47,6 +47,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('roles', [RolController::class, 'index'])->name('roles.index');
     Route::post('roles', [RolController::class, 'store'])->name('roles.store');
+    Route::put('roles', [RolController::class, 'sync'])->name('roles.sync');
     Route::put('roles/{id}', [RolController::class, 'update'])->name('roles.update');
     Route::delete('roles/{id}', [RolController::class, 'destroy'])->name('roles.destroy');
 

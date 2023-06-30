@@ -86,6 +86,10 @@ class RolController extends Controller
 
     }
 
+    public function sync(Request $request)
+    {
+        dd($request->all);
+    }
     /**
      * Update the specified resource in storage.
      */

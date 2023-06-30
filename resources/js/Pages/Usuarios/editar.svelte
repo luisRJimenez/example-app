@@ -40,9 +40,9 @@
   });
 
   const submit = () => {
-      $form.patch(`usuarios.update:`), {
+      $form.patch(`usuarios.update:`, {
           onFinish: () => $form.reset("password", "password_confirmation"),
-      };
+      });
   };
 
   $: console.log(JSON.stringify($form))

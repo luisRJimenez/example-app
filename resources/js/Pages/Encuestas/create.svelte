@@ -34,11 +34,11 @@
   };
 
   const sincroinizar = () => {
-   let url = '/encuestas/crear';
-   
-   router.post(url, {
-     data: JSON.stringify(todos),
-     onFinish: () => console.log('aqui')
+   let url = `/roles/sync`;
+   let data = JSON.stringify(todos);
+   router.put(url, {
+     data }, {
+     onSuccess: () => console.log(data)
    });
    console.log('sincroinizar')
   }
