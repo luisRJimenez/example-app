@@ -8,6 +8,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,7 +48,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('roles', [RolController::class, 'index'])->name('roles.index');
     Route::post('roles', [RolController::class, 'store'])->name('roles.store');
-    Route::put('roles', [RolController::class, 'sync'])->name('roles.sync');
+    
     Route::put('roles/{id}', [RolController::class, 'update'])->name('roles.update');
     Route::delete('roles/{id}', [RolController::class, 'destroy'])->name('roles.destroy');
 
@@ -63,11 +64,13 @@ Route::get('/encuestas', function () {
 })->middleware(['auth', 'verified'])->name('encuestas.index');
 
 Route::get('/encuestas/crear', function () {
+   
     return Inertia::render('Encuestas/create');
 })->middleware(['auth', 'verified'])->name('encuestas.create');
 
-Route::post('/encuestas/crear', function () {
-    return Inertia::render('Encuestas/create');
+Route::post('/encuestas/crear', function (Request $request) {
+   
+   return Inertia::render('Encuestas/create', ['datos' => $request->all,]);
 })->middleware(['auth', 'verified'])->name('encuestas.store');
 
 

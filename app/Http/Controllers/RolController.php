@@ -12,6 +12,7 @@ use Inertia\Response;
 use Illuminate\Support\Facades\DB;
 use Iluminate\Support\Facades\Redirect;
 
+
 class RolController extends Controller
 {
     /**
@@ -57,7 +58,7 @@ class RolController extends Controller
     public function store(Request $request): RedirectResponse
     {
         
-
+        
         $request->validate([
             'name' => 'required|string|max:255|unique:roles',
             
@@ -86,7 +87,7 @@ class RolController extends Controller
 
     }
 
-    public function sync(Request $request)
+    public function sync(Request $request): RedirectResponse
     {
         dd($request->all);
     }
@@ -95,6 +96,7 @@ class RolController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        dd($request->name);
         $this->validate($request, [
             'name' => 'required',
 

@@ -12,6 +12,7 @@
   import SecondaryButton from "@/Components/SecondaryButton.svelte";
 
   let todos = [];
+  export let datos;
 
   const form = useForm({
       name: "",
@@ -34,9 +35,9 @@
   };
 
   const sincroinizar = () => {
-   let url = `/roles/sync`;
+   let url = `/encuestas/crear`;
    let data = JSON.stringify(todos);
-   router.put(url, {
+   router.post(url, {
      data }, {
      onSuccess: () => console.log(data)
    });
@@ -51,6 +52,8 @@
 </svelte:head>
 
 <pre>{JSON.stringify($form)}</pre>
+
+{datos}
 <pre>Encuestas a sincroinizar: {JSON.stringify(todos.length)}</pre>
 <div class="py-12">
   <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
