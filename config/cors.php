@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => ['api/*', 'sanctum/csrf-cookie', 'encuestas/crear'],
 
     'allowed_methods' => ['*'],
 
@@ -25,10 +25,10 @@ return [
 
     'allowed_headers' => ['*'],
 
-    'exposed_headers' => ['x-inertia'],
+    'exposed_headers' => [], //x-inertia
 
     'max_age' => 0,
 
-    'supports_credentials' => false,
+    'supports_credentials' => true,
 
 ];

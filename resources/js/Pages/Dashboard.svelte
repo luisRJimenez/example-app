@@ -2,7 +2,10 @@
    // context="module"
     export { default as layout } from "../Layouts/AuthenticatedLayout.svelte";
     //import AuthenticatedLayout from "../Layouts/AuthenticatedLayout.svelte";
+    
 </script>
+
+<script>export let phpVersion;</script>
 
 <svelte:head>
     <title>Dashboard</title>
@@ -16,6 +19,7 @@
             >
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     You're logged in!
+                    {phpVersion}
                 </div>
             </div>
         </div>

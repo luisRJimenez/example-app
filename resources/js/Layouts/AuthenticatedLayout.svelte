@@ -15,6 +15,7 @@
 </script>
 
 <div>
+   
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
         <nav
             class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700"
@@ -90,6 +91,17 @@
                                  </NavLink>
                              </div>
                              
+                             <div
+                                 class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex"
+                             >
+                                 <!-- TODO: work on favicon -->
+                                 <NavLink
+                                     href={window.route("miembros.index")}
+                                     active={window.route().current("miembros.index")}
+                                 >
+                                     Miembros
+                                 </NavLink>
+                             </div>
 
                     </div>
 
@@ -129,7 +141,7 @@
                                         Profile
                                     </DropdownLink>
                                     <DropdownLink
-                                        href={route('logout')} 
+                                        href={window.route('logout')} 
                                         method="get"
                                         as="button"
                                     >
@@ -226,8 +238,8 @@
                             Profile
                         </ResponsiveNavLink>
                         <ResponsiveNavLink
-                            href={route("logout")}
-                            method="post"
+                            href={window.route("logout")}
+                            method="get"
                             as="button"
                         >
                             Log Out

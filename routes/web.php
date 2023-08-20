@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\PruebaController;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Foundation\Application;
@@ -30,8 +31,31 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('prueba', function () {
+    return Inertia::render('Prueba', ['phpVersion' => PHP_VERSION,] );
+});
+
+Route::get('prueba2', function () {
+    return Inertia::render('Prueba2', ['phpVersion' => PHP_VERSION,] );
+});
+
+Route::get('prueba3', function () {
+    return Inertia::render('Prueba3', ['phpVersion' => PHP_VERSION,] );
+});
+
+Route::get('encuestas', function () {
+    return Inertia::render('Encuestas/index', ['phpVersion' => PHP_VERSION,]);
+})->name('encuestas.index');
+
+Route::get('encuestas/crear', function () {
+    return Inertia::render('Encuestas/create', ['phpVersion' => 'HELLOS',]);
+})->name('encuestas.create');
+
+
+Route::post('encuestas/crear', PruebaController::class)->name('encuestas.create');
+
 Route::get('dashboard', function () {
-    return Inertia::render('Dashboard');
+    return Inertia::render('Dashboard', ['phpVersion' => PHP_VERSION,]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
@@ -55,24 +79,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/usuarios/{id}', [UsuarioController::class, 'edit'] )->name('usuarios.editar');
     Route::patch('/usuarios/{id}', [UsuarioController::class, 'update'] )->name('usuarios.update');
     Route::delete('/usuarios/{id}', [UsuarioController::class, 'destroy'] )->name('usuarios.destroy');
+
+    Route::get('/miembros', function () {
+        return Inertia::render('Miembros/index');
+    })->name('miembros.index');
 });
-
-
-
-Route::get('/encuestas', function () {
-    return Inertia::render('Encuestas/index');
-})->middleware(['auth', 'verified'])->name('encuestas.index');
-
-Route::get('/encuestas/crear', function () {
-   
-    return Inertia::render('Encuestas/create');
-})->middleware(['auth', 'verified'])->name('encuestas.create');
-
-Route::post('/encuestas/crear', function (Request $request) {
-   
-   return Inertia::render('Encuestas/create', ['datos' => $request->all,]);
-})->middleware(['auth', 'verified'])->name('encuestas.store');
-
-
 
 require __DIR__.'/auth.php';

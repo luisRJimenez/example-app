@@ -38,6 +38,7 @@ class RolController extends Controller
         return Inertia('Roles/index', [
             'role'=>$role,
             'permisos' => $permisos,
+            'phpVersion' => PHP_VERSION,
             
           
         ]);
