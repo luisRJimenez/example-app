@@ -30,8 +30,8 @@ class RouteServiceProvider extends ServiceProvider
           // $user = Auth::user();
         //    $userId = $user->id; // Aquí se accede a la propiedad 'id' solo si el usuario está autenticado
             // Resto del código...
-          //  RateLimiter::for('api', function (Request $request) {
-           //     return Limit::perMinute(1)->by($request->user()->id ?: $request->ip());
+            RateLimiter::for('api', function (Request $request) {
+             return Limit::perMinute(1)->by($request->user()->id ?: $request->ip());
        // });
      //   }
         

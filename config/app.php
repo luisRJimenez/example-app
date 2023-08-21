@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://example-app-txvi-dev.fl0.io/'),
+    'url' => env('APP_URL', 'http://localhost'),
     // 'scheme' => env('APP_SCHEME', 'https'),
     'asset_url' => env('ASSET_URL'),
 
